@@ -1,6 +1,6 @@
 package Praktika;
 
-public class first_praktika {
+public class first_practice {
     public static void main(String[] args) {
         System.out.println(convert(5));
         System.out.println(convert(3));
