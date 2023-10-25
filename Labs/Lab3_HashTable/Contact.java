@@ -1,4 +1,4 @@
-package Labs.HashTable;
+package Labs.Lab3_HashTable;
 
 public class Contact {
 
@@ -16,7 +16,7 @@ public class Contact {
 
     public String getName() {
         if (this.name == null) {
-            return null;
+            return "No nameУ";
         } else {
             return this.name;
         }

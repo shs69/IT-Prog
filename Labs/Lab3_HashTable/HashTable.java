@@ -1,4 +1,4 @@
-package Labs.HashTable;
+package Labs.Lab3_HashTable;
 import java.util.LinkedList;
 
 public class HashTable<K, V> {
@@ -44,7 +44,6 @@ public class HashTable<K, V> {
         for (Entry<K, V> entryElem: table[index]) {
             if (entryElem.getKey().equals(key)) {
                 entryElem.setValue(value);
-                return;
             }
         }
         table[index].add(new Entry<K, V>(key, value));
@@ -53,7 +52,6 @@ public class HashTable<K, V> {
     public V get(K key){
         int index = hash(key);
         LinkedList<Entry<K, V>> list = table[index];
-        String resultValue = "";
         if (list != null) {
             for (Entry<K, V> entryElem: list) {
                 if (entryElem.getKey().equals(key)){

@@ -1,4 +1,4 @@
-package Labs;
+package Labs.Lab1_Syntax;
 
 public class JavaHelloWorldProgram {
     public static void main(String[] args){

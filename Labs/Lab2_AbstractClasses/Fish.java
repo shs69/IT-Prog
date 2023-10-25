@@ -1,4 +1,4 @@
-package Labs.Classes_2;
+package Labs.Lab2_AbstractClasses;
 
 public class Fish extends Animals{
     private boolean isGold;

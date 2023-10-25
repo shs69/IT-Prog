@@ -1,4 +1,4 @@
-package Labs.HashTable;
+package Labs.Lab3_HashTable;
 
 public class Test_HashTable {
     public static void main(String[] args){
@@ -16,7 +16,7 @@ public class Test_HashTable {
         vanya.setEmail("oops_broke@mail.ru");
         System.out.println(vanya.getEmail());
         phoneBook.remove("78005553535");
-        System.out.println(phoneBook.get("78005553535"));
-        System.out.println(phoneBook.get("79103136542").getAllInfo():);
+        System.out.println(phoneBook.get("78005553535").getName());
+        System.out.println(phoneBook.get("79103136542").getAllInfo());
     }
 }

@@ -1,4 +1,4 @@
-package Labs;
+package Labs.Lab1_Syntax;
 
 public class Primes {
     public static void main(String[] args) {

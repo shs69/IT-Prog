@@ -1,4 +1,4 @@
-package Labs.HashTable;
+package Labs.Lab3_HashTable;
 
 public class Entry<K, V> {
     private K key;
