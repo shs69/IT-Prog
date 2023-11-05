@@ -16,7 +16,7 @@ public class Contact {
 
     public String getName() {
         if (this.name == null) {
-            return "No nameУ";
+            return null;
         } else {
             return this.name;
         }
@@ -42,7 +42,7 @@ public class Contact {
         if (this.contactDetails == null || this.name == null || this.email == null) {
             return null;
         } else {
-            return "*******" + '\n' + "Name:" + name + '\n' + "Email:" + email + '\n' + "Contact Details:" + contactDetails + '\n' + "*******";
+            return "*******" + '\n' + "Name: " + name + '\n' + "Email: " + email + '\n' + "Contact Details: " + contactDetails + '\n' + "*******";
         }
     }
     public void setName(String newName){
@@ -61,5 +61,13 @@ public class Contact {
         if (!newContactDetails.equals(contactDetails)){
             this.contactDetails = newContactDetails;
         }
+    }
+    @Override
+    public int hashCode(){
+        int result = 0;
+        for (int i = 0; i < name.length(); i++) {
+            result += name.charAt(i);
+        }
+        return result % 59;
     }
 }

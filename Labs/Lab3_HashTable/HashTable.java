@@ -13,9 +13,11 @@ public class HashTable<K, V> {
         hashMap.put(2, "4VK Кузя Лакомкин - стражи хорошего настроения и здорового образа жизни");
         hashMap.put(3, "Съешь пачку Кузи и ты воин света");
         hashMap.put(4, "Тут могла быть ваша реклама");
+
         for (int i = 0; i <= 1; i++){
             System.out.println(hashMap.get(1));
         }
+
         System.out.println(hashMap.get(0));
         System.out.println(hashMap.get(2));
         System.out.println(hashMap.get(3));
