@@ -286,7 +286,7 @@ public class fourth_practice {
         return newStr;
     }
 
-sa    public static int shortestWay(int[][] matrix) {
+    public static int shortestWay(int[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return 0;
         }
