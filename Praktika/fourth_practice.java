@@ -27,7 +27,7 @@ public class fourth_practice {
         System.out.println(countSort("vvvvaajaaaaa"));
 
         System.out.println("№6");
-        System.out.println(convertToNum("eight"));
+        System.out.println(convertToNum("five hundred"));
         System.out.println(convertToNum("five hundred sixty seven"));
         System.out.println(convertToNum("thirty one"));
 
@@ -211,31 +211,39 @@ public class fourth_practice {
         return result;
     }
 
-    public static String convertToNum(String number) {
-        String[] digits = new String[]{"digits", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-        String[] afterTen = new String[]{"afterTen", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
-        String[] tensDigits = new String[]{"tenDigits", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
-        String[] numbers = number.split(" ");
-        String result = "";
+    public static int convertToNum(String number) {
+        String[] numbers = {
+                "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+                "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred"
+        };
 
-        for (String elem : numbers) {
-            for (int i = 0; i < digits.length; i++) {
-                if (elem.equals(digits[i])) {
-                    result += Integer.toString(i);
-                } else {
-                    if (elem.equals(afterTen[i])) {
-                        result += '1' + Integer.toString(i);
-                    } else {
-                        if (elem.equals(tensDigits[i])) {
-                            result += Integer.toString(i);
-                        }
-                    }
-                }
-            }
+        int[] values = {
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                11, 12, 13, 14, 15, 16, 17, 18, 19,
+                20, 30, 40, 50, 60, 70, 80, 90, 100
+        };
 
+        HashMap<String, Integer> numberMap = new HashMap<>();
+        for (int i = 0; i < numbers.length; i++) {
+            numberMap.put(numbers[i], values[i]);
         }
 
-        return result;
+        String[] parts = number.split(" ");
+        int result = 0;
+        int current = 0;
+
+        for (String part : parts) {
+            int value = numberMap.get(part);
+            if (value == 100) {
+                current *= 100;
+            } else {
+                current += value;
+            }
+        }
+
+
+        return result + current;
     }
 
     public static String uniqueSubstring(String initSequence) {
