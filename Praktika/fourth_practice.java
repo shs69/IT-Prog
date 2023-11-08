@@ -286,12 +286,7 @@ public class fourth_practice {
         return newStr;
     }
 
-    // Создаём новый массив, в котором каждую ячейку заполняем минимальной(!!!) длиной пути от [0][0]
-    // до этой клетки. Сначала заполняем ячейку 0:0 (она равна ячейке 0:0 начальной матрице), затем
-    // на её основе заполняем первую строку и первый столбец (с индексами 0 i и j соотвественно).
-    // Относительно первой строки и первого столбца заполняем оставшиеся ячейки, выбирая наименьшее.
-
-    public static int shortestWay(int[][] matrix) {
+sa    public static int shortestWay(int[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return 0;
         }
@@ -318,8 +313,6 @@ public class fourth_practice {
         return newMatrix[m - 1][n - 1];
     }
 
-    // Substring включает символ, индекс которого указан в качестве начального, и не включает символ, индекс
-// которого указан в качестве конечного.
     public static String numericOrder(String string) {
         String[] splitString = string.split(" ");
         String[] newString = new String[splitString.length];
