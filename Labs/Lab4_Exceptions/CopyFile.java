@@ -12,7 +12,7 @@ public class CopyFile {
 
     }
 
-    private static boolean copyFile(String pathToFile1, String pathToFile2) throws IOException{
+    private static boolean copyFile(String pathToFile1, String pathToFile2) {
         String result = "";
 
         try (InputStreamReader input = new InputStreamReader(new FileInputStream(pathToFile1), StandardCharsets.UTF_8)){
@@ -21,7 +21,7 @@ public class CopyFile {
                 result += (char) line;
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");
+            System.out.println("Файл для копирования содержимого не найден");
             return false;
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -30,8 +30,11 @@ public class CopyFile {
 
         try (FileOutputStream outputStream = new FileOutputStream(pathToFile2)) {
             outputStream.write(result.getBytes());
-        } catch (WritePendingException | WriteAbortedException e) {
-            System.out.println("Ошибка записи");
+        } catch (SecurityException e) {
+            System.out.println("Файл защищён от записи");
+            return false;
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл для записи скопированного содержимого не найден");
             return false;
         } catch (IOException e) {
             System.out.println(e.getMessage());
