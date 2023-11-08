@@ -7,22 +7,18 @@ public class ScannerInteger {
 
     public static void main(String[] args){
         try {
-            System.out.println(parseToInt());
+            System.out.println(setDigit());
         } catch (CustomInputMismatchException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    private static int parseToInt() throws InputMismatchException {
-        try {
-            return setDigit();
-        } catch (InputMismatchException e) {
-            throw new CustomInputMismatchException("ОПА НЕДЖАН!");
-        }
-    }
-
     private static int setDigit() {
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            return scanner.nextInt();
+        } catch (InputMismatchException e) {
+            throw new CustomInputMismatchException("Данные введённые вами не являются целым числом. \nВведите пожалуйста ЦЕЛОЕ число");
+        }
+
     }
 }
