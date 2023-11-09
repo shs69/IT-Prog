@@ -1,8 +1,6 @@
 package Labs.Lab4_Exceptions;
 
-import java.util.InputMismatchException;
-
-public class CustomInputMismatchException extends InputMismatchException {
+public class CustomInputMismatchException extends Exception {
     public CustomInputMismatchException() {
         super("Custom Input Mismatch Exception");
     }

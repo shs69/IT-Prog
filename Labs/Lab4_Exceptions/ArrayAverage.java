@@ -34,7 +34,7 @@ public class ArrayAverage {
     }
 
 
-    public static float arrayAverage(Object[] massive) throws ArrayStoreException, NumberFormatException, ArrayIndexOutOfBoundsException{
+    public static float arrayAverage(Object[] massive) throws ArrayStoreException{
         float sum = 0;
         for (int i = 0; i < massive.length; i++) {
             if (massive[i] instanceof Integer) {
@@ -49,7 +49,7 @@ public class ArrayAverage {
         return sum / massive.length;
     }
 
-    public static float arrayAverage(Object[] massive, int len) throws ArrayStoreException, NumberFormatException, ArrayIndexOutOfBoundsException{
+    public static float arrayAverage(Object[] massive, int len) throws ArrayStoreException{
         float sum = 0;
         for (int i = 0; i < len; i++) {
             if (massive[i] instanceof Integer) {

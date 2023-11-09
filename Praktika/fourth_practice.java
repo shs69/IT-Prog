@@ -19,7 +19,7 @@ public class fourth_practice {
         System.out.println(binarySystem(4));
 
         System.out.println("№4");
-        System.out.println(alphabeticRow("abcdjuwx"));
+        System.out.println(alphabeticRow("abcdc"));
         System.out.println(alphabeticRow("klmabzyxw"));
 
         System.out.println("№5");
@@ -134,35 +134,37 @@ public class fourth_practice {
     public static String alphabeticRow(String string) {
         ArrayList<String> massive = new ArrayList<>(string.length());
         String newStr = "";
+        String poryadok = "";
 
         for (int i = 0; i < string.length() - 1; i++) {
             char prevChar = string.charAt(i);
             char nextChar = string.charAt(i + 1);
+
             if (newStr.isEmpty()) {
                 newStr += prevChar;
             }
-            if (Math.abs(nextChar - newStr.charAt(newStr.length() - 1)) == 1) {
+            if (nextChar - newStr.charAt(newStr.length() - 1) == 1 && !poryadok.equals("убывание")) {
                 newStr += nextChar;
+                poryadok = "возрастание";
+            } else if (nextChar - newStr.charAt(newStr.length() - 1) == -1 && !poryadok.equals("возрастание")) {
+                newStr += nextChar;
+                poryadok = "убывание";
             } else {
+                poryadok = "";
                 newStr = "";
             }
             massive.add(newStr);
         }
 
-        int maxLength = 0;
 
-        for (String sequence : massive) {
-            if (sequence.length() > maxLength) {
-                maxLength = sequence.length();
+      String maxStr = "";
+
+        for (String sequence: massive) {
+            if (sequence.length() > maxStr.length()) {
+                maxStr = sequence;
             }
         }
-
-        for (String sequence : massive) {
-            if (sequence.length() == maxLength) {
-                newStr = sequence;
-            }
-        }
-        return newStr;
+        return maxStr;
     }
 
     public static String countSort(String str) {
@@ -183,6 +185,9 @@ public class fourth_practice {
                 newStr = "";
             }
             if (i == str.length() - 2) {
+                if (newStr.isEmpty()) {
+                    newStr += nextChar;
+                }
                 list.add(newStr.charAt(0) + Integer.toString(newStr.length()));
             }
         }
@@ -321,13 +326,14 @@ public class fourth_practice {
         for (String elem : splitString) {
             for (int i = 0; i < elem.length(); i++) {
                 if (elem.charAt(i) >= 48 && elem.charAt(i) <= 57) {
+                    int index = Integer.parseInt("" + elem.charAt(i)) - 1;
                     if (i == 0) {
-                        newString[getIndex("" + elem.charAt(i))] = elem.substring(1);
+                        newString[index] = elem.substring(1);
                     } else {
                         if (i == elem.length() - 1) {
-                            newString[getIndex("" + elem.charAt(i))] = elem.substring(0, i);
+                            newString[index] = elem.substring(0, i);
                         } else {
-                            newString[getIndex("" + elem.charAt(i))] = elem.substring(0, i) + elem.substring(i + 1);
+                            newString[index] = elem.substring(0, i) + elem.substring(i + 1);
                         }
                     }
                 }
@@ -339,16 +345,6 @@ public class fourth_practice {
         }
 
         return result;
-    }
-
-    public static int getIndex(String charElem) {
-        int result = 0;
-        for (int i = 0; i <= 10; i++) {
-            if (Integer.toString(i).equals(charElem)) {
-                result = i;
-            }
-        }
-        return result - 1;
     }
 
     public static int switchNums(int firstDigit, int secondDigit) {
