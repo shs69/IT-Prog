@@ -27,7 +27,7 @@ public class fourth_practice {
         System.out.println(countSort("vvvvaajaaaaa"));
 
         System.out.println("№6");
-        System.out.println(convertToNum("five hundred"));
+        System.out.println(convertToNum("eight"));
         System.out.println(convertToNum("five hundred sixty seven"));
         System.out.println(convertToNum("thirty one"));
 

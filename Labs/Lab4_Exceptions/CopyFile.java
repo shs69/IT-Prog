@@ -1,7 +1,6 @@
 package Labs.Lab4_Exceptions;
 
 import java.io.*;
-import java.nio.channels.WritePendingException;
 import java.nio.charset.StandardCharsets;
 
 public class CopyFile {
