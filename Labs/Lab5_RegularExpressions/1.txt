@@ -1,0 +1,1 @@
+<a href=https://github.com/prohanter34/ITIP_labs/blob/main/src/lab5/Hyperlink.java> https://github.com/prohanter34/ITIP_labs/blob/main/src/lab5/Hyperlink.java </a>
