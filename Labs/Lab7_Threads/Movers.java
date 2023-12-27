@@ -1,7 +1,6 @@
 package Labs.Lab7_Threads;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 
 public class Movers {

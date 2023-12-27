@@ -11,7 +11,7 @@ public class ArraySumCallable implements Callable<Double> {
     }
 
     @Override
-    public Double call() throws Exception {
+    public Double call() {
         double res = 0;
         for (double elem : array) {
             res += elem;

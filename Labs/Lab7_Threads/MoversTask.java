@@ -43,9 +43,7 @@ public class MoversTask extends RecursiveTask<Double> {
         remainProducts.removeAll(currentLoad);
 
         List<MoversTask> subTasks = new ArrayList<>();
-        subTasks.add(new
-
-                MoversTask(remainProducts));
+        subTasks.add(new MoversTask(remainProducts));
 
         invokeAll(subTasks);
 

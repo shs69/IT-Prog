@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 
 public class ArraySum {
     public static void main(String[] args) {
-        System.out.println(SumOfArray(new double[]{1, 2, 3, 4, 5.5, 6}, 4));
+        System.out.println(SumOfArray(new double[]{1, 2, 3, 4, 5.5, 6}, 3));
     }
 
     public static float SumOfArray(double[] massive, int count) {

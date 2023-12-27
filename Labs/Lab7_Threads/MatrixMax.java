@@ -10,7 +10,7 @@ public class MatrixMax {
     public static void main(String[] args) {
         double[][] matrix = {
                 {1, 2, 3, 5},
-                {5, 3, 0, 1},
+                {25, 3, 0, 1},
                 {1, 1, 1, 1},
         };
         System.out.println(maxOfMatrix(matrix));

@@ -417,4 +417,6 @@ public class fifth_practice {
 
         return Integer.parseInt(minimalNum) == sameNum;
     }
+
+
 }
