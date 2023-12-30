@@ -42,7 +42,8 @@ public class Contact {
         if (this.contactDetails == null || this.name == null || this.email == null) {
             return null;
         } else {
-            return "*******" + '\n' + "Name: " + name + '\n' + "Email: " + email + '\n' + "Contact Details: " + contactDetails + '\n' + "*******";
+            return "*******" + '\n' + "Name: " + name + '\n' + "Email: " + email
+                    + '\n' + "Contact Details: " + contactDetails + '\n' + "*******";
         }
     }
     public void setName(String newName){

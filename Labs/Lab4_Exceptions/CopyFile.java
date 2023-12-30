@@ -4,7 +4,6 @@ import java.nio.charset.StandardCharsets;
 
 public class CopyFile {
     public static void main(String[] args) throws IOException {
-
         final boolean result = copyFile("src/Labs/Lab4_Exceptions/test.txt", "src/Labs/Lab4_Exceptions/copy_test.txt" );
         System.out.println(result);
 

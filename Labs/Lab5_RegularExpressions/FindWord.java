@@ -3,14 +3,13 @@ import java.util.regex.*;
 
 public class FindWord {
     public static void main(String[] args) {
-        String result = wordSearch('o', "aaaaa AAAAA abu bandit mama papa dasdad ");
+        String result = wordSearch('o', "aaaaa AAAAA bbbb dddd ");
         if (result.isEmpty()) {
             System.out.println("В строке нет слов начинающихся с этой буквы");
         } else {
             System.out.println(result);
         }
     }
-
     public static String wordSearch(char letter, String string) {
         String result = "";
         String newLetter = "" + letter;
@@ -20,7 +19,6 @@ public class FindWord {
         while (matcher.find()) {
             result += matcher.group() + "\n";
         }
-
         return result;
     }
 }

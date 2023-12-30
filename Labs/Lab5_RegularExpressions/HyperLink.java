@@ -1,5 +1,6 @@
 package Labs.Lab5_RegularExpressions;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -17,8 +18,8 @@ public class HyperLink {
         }
 
         for (String elem: text){
-//            FileOutputStream outputStream = new FileOutputStream("src/Labs/Lab5_RegularExpressions/1.html",true);
-//            outputStream.write((elem + "\n").getBytes());
+            FileOutputStream outputStream = new FileOutputStream("src/Labs/Lab5_RegularExpressions/1.html",true);
+            outputStream.write((elem + "\n").getBytes());
             System.out.println(elem);
         }
     }

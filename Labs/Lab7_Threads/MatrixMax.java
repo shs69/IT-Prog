@@ -15,7 +15,6 @@ public class MatrixMax {
         };
         System.out.println(maxOfMatrix(matrix));
     }
-
     public static double maxOfMatrix(double[][] array){
         double maxx = 0;
         ExecutorService service = Executors.newFixedThreadPool(array.length);
@@ -29,7 +28,6 @@ public class MatrixMax {
                 System.out.println("Error");
             }
         }
-
         for (Double elem: result){
             if (elem >= maxx) {
                 maxx = elem;

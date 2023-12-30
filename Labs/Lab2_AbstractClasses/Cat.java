@@ -5,7 +5,8 @@ public class Cat extends Animals{
     private boolean hungry;
     private boolean sleep;
 
-    public Cat(String familyAnimal, String name, float weight, String color, String breed, String ownerName, String catMother, boolean hungry, boolean sleep){
+    public Cat(String familyAnimal, String name, float weight, String color, String breed,
+               String ownerName, String catMother, boolean hungry, boolean sleep){
         super(familyAnimal, name, weight, color, breed, ownerName);
         this.catMother = catMother;
         this.hungry = hungry;

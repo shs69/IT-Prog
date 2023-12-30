@@ -5,11 +5,9 @@ import java.util.TreeMap;
 
 public class StoreSales {
     private Map<String, Integer> sales;
-
     public StoreSales() {
         sales = new TreeMap<>();
     }
-
     public void addSale(String product, int count) {
         if (sales.containsKey(product)) {
             int prevCount = sales.get(product);
@@ -18,7 +16,6 @@ public class StoreSales {
             sales.put(product, count);
         }
     }
-
     public String salesList() {
         StringBuilder list = new StringBuilder();
         for (String product: sales.keySet()) {
@@ -30,7 +27,6 @@ public class StoreSales {
         }
         return list.toString();
     }
-
     public String getSalesSum() {
         double totalSales = 0;
         for (int count: sales.values()) {
@@ -38,7 +34,6 @@ public class StoreSales {
         }
         return String.valueOf(totalSales);
     }
-
     public String getPopularProduct() {
         int maxCount = 0;
         String res = "";
